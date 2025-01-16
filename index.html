@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome To Nanopool</title>
+  </head>
+  <link rel="stylesheet" href="index.css">
+  <body>
+    <!-- header and function -->
+    <div class="header-container">
+      <div class="header">Welcome To Nanopool</div>
+      <div class="header">Count:</div>
+      <div class="counter" id="counterValue">0</div>
+
+      <button class="btn" id="increaseBtn">เพิ่ม
+        <span class="tooltiptext">เพิ่ม</span>
+      </button>
+      
+      <button class="btn" id="decreaseBtn">ลด
+        <span class="tooltiptext">ลด</span>
+      </button>
+
+    </div>
+
+    <script>
+      let counter = 0;
+      const maxLimit = 10;
+      const minLimit = -10;
+    
+      // Update counter
+      function updateCounter() {
+        const counterElement = document.getElementById("counterValue");
+        counterElement.textContent = counter;
+        disabledbutton();
+      }
+    
+      function disabledbutton() {
+        const increaseBtn = document.getElementById("increaseBtn"); //ทำการเข้า่ถึงinceraseBin ด้วย document
+        const decreaseBtn = document.getElementById("decreaseBtn");
+        increaseBtn.disabled = counter === maxLimit;
+        decreaseBtn.disabled = counter === minLimit;
+      }
+    
+      // เพิ่ม 1
+      document.getElementById("increaseBtn").addEventListener("click", function () {
+        if (counter < maxLimit) {
+          counter++;
+          updateCounter();
+          console.log(counter);
+        }
+        if (counter === maxLimit) {
+          alert("Counter reached 10");
+        }
+      });
+    
+      // ลด 1
+      document.getElementById("decreaseBtn").addEventListener("click", function () {
+        if (counter > minLimit) {
+          counter--;
+          updateCounter();
+          console.log(counter);
+        }
+        if (counter === minLimit) {
+          alert("Counter reached -10");
+        }
+      });
+    
+    
+      disabledbutton();
+    </script>
+
+    <div class="cards-container">
+      <!-- zephyr -->
+      <div class="zephyr-card">
+        <div class="zephyr-header">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ-dMK4YDZah7SVCDyIo85jP0rJ_IevV6LlA&s"
+            alt="Zephyr Logo"
+          />
+          <span>Zephyr</span>
+        </div>
+        <div class="zephyr-content">
+          <table class="zephyr-table">
+            <tbody>
+              <tr>
+                <td>Pool Hashrate</td>
+                <td>70,355.0 kH/s</td>
+              </tr>
+              <tr>
+                <td>Miners Count</td>
+                <td>128</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td>0.03mB $3.11</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="zephyr-additional-info">
+          <div class="zephyr-info-box">
+            <ul>
+              <li>Payouts 0.1 - 50 ZEPH</li>
+              <li>Algorithm RandomX</li>
+            </ul>
+          </div>
+          <div class="zephyr-footer">
+            <a href="test.html" class="zephyr-button">Quick Start</a>
+            <a href="overviewZephy.html" class="zephyr-button">Overview</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ethereum -->
+      <div class="ethereum-card">
+        <div class="ethereum-header">
+          <img
+            src="https://s3.coinmarketcap.com/static-gravity/image/002581a1db964eab96687622e88d31fa.png"
+            alt="Ethereum Classic Logo"
+          />
+          <span>Ethereum Classic</span>
+        </div>
+        <div class="ethereum-content">
+          <table class="ethereum-table">
+            <tbody>
+              <tr>
+                <td>Pool Hashrate</td>
+                <td>70,355.0 kH/s</td>
+              </tr>
+              <tr>
+                <td>Miners Count</td>
+                <td>128</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td>0.03mB $3.11</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ethereum-additional-info">
+          <div class="ethereum-info-box">
+            <ul>
+              <li>Payouts 0.1 - 50 ZEPH</li>
+              <li>Algorithm RandomX</li>
+            </ul>
+          </div>
+          <div class="ethereum-footer">
+            <button class="ethereum-button">Quick Start</button>
+            <a href="overviewEtherum.html" class="ethereum-button">Overview</a>
+          </div>
+        </div>
+      </div>
+      <!-- monero -->
+      <div class="monero-card">
+        <div class="monero-header">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN3NfY1T-7b2kjzmQlJuDH5U4MdsORqVzR5Q&s"
+            alt="Monero Logo"
+          />
+          <span>Monero</span>
+        </div>
+        <div class="monero-content">
+          <table class="monero-table">
+            <tbody>
+              <tr>
+                <td>Pool Hashrate</td>
+                <td>70,355.0 kH/s</td>
+              </tr>
+              <tr>
+                <td>Miners Count</td>
+                <td>128</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td>0.03mB $3.11</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="monero-additional-info">
+          <div class="monero-info-box">
+            <ul>
+              <li>Payouts 0.1 - 50 ZEPH</li>
+              <li>Algorithm RandomX</li>
+            </ul>
+          </div>
+          <div class="monero-footer">
+            <button class="monero-button">Quick Start</button>
+            <a href="overviewMonero.html" class="monero-button">Overview</a>
+          </div>
+        </div>
+      </div>
+      <!-- Raven -->
+      <div class="raven-card">
+        <div class="raven-header">
+          <img
+            src="https://pbs.twimg.com/profile_images/1362961933297680384/bsBHgzkW_400x400.jpg"
+            alt="Raven Logo"
+          />
+          <span>Raven</span>
+        </div>
+        <div class="raven-content">
+          <table class="raven-table">
+            <tbody>
+              <tr>
+                <td>Pool Hashrate</td>
+                <td>70,355.0 kH/s</td>
+              </tr>
+              <tr>
+                <td>Miners Count</td>
+                <td>128</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td>0.03mB $3.11</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="raven-additional-info">
+          <div class="raven-info-box">
+            <ul>
+              <li>Payouts 0.1 - 50 ZEPH</li>
+              <li>Algorithm RandomX</li>
+            </ul>
+          </div>
+          <div class="raven-footer">
+            <button class="raven-button">Quick Start</button>
+            <a href="overviewRaven.html" class="raven-button">Overview</a>
+          </div>
+        </div>
+      </div>
+      <!-- conflux -->
+      <div class="conflux-card">
+        <div class="conflux-header">
+          <img
+            src="https://s3.coinmarketcap.com/static-gravity/image/2f95e1afd93b4587a740bd70ca60c4bf.png"
+            alt="conflux Logo"
+          />
+          <span>conflux</span>
+        </div>
+        <div class="conflux-content">
+          <table class="conflux-table">
+            <tbody>
+              <tr>
+                <td>Pool Hashrate</td>
+                <td>70,355.0 kH/s</td>
+              </tr>
+              <tr>
+                <td>Miners Count</td>
+                <td>128</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td>0.03mB $3.11</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="conflux-additional-info">
+          <div class="conflux-info-box">
+            <ul>
+              <li>Payouts 0.1 - 50 ZEPH</li>
+              <li>Algorithm RandomX</li>
+            </ul>
+          </div>
+          <div class="conflux-footer">
+            <button class="conflux-button">Quick Start</button>
+            <a href="overviewConflux.html" class="conflux-button">Overview</a>
+          </div>
+        </div>
+      </div>
+      <!-- ergo -->
+      <div class="ergo-card">
+        <div class="ergo-header">
+          <img
+            src="https://png.pngtree.com/png-vector/20221120/ourmid/pngtree-summation-flat-design-long-shadow-glyph-icon-flat-symbol-accounting-vector-png-image_41851236.jpg"
+            alt="Ergo Logo"
+          />
+          <span>Ergo</span>
+        </div>
+        <div class="ergo-content">
+          <table class="ergo-table">
+            <tbody>
+              <tr>
+                <td>Pool Hashrate</td>
+                <td>70,355.0 kH/s</td>
+              </tr>
+              <tr>
+                <td>Miners Count</td>
+                <td>128</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td>0.03mB $3.11</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ergo-additional-info">
+          <div class="ergo-info-box">
+            <ul>
+              <li>Payouts 0.1 - 50 ZEPH</li>
+              <li>Algorithm RandomX</li>
+            </ul>
+          </div>
+          <div class="ergo-footer">
+            <button class="ergo-button">Quick Start</button>
+            <a href="overviewErgo.html" class="ergo-button">Overview</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+

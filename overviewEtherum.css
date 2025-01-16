@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+  }
+  
+  .header {
+    background-color: #4caf50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+    width: 100%; /* กำหนดให้กว้างเต็มหน้าจอ */
+    height: 60px; /* กำหนดความสูงของ */
+    box-sizing: border-box; /* ป้องกันการขยายของ padding */
+  
+    top: 0; /* ติดอยู่ที่ขอบบนสุด */
+    left: 0; /* ติดอยู่ที่ขอบซ้ายสุด */
+    right: 0;
+    /* ทำให้ header อยู่เหนือเนื้อหาทั้งหมด */
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .navbar .epoch {
+    padding: 5px 10px;
+    margin-right: 15px;
+    font-weight: bold;
+  }
+  
+  .header .navbar a {
+    margin-right: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .header .navbar a:hover {
+    text-decoration: none;
+    border: 15px solid gray;
+    background-color: gray;
+    box-sizing: border-box;
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-right: 350px;
+
+  }
+  
+  .currency-dropdown {
+    border: none;
+    padding: 5px 10px;
+    margin-right: 1px;
+    background-color: #4caf50;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* สไตล์สำหรับ input */
+  .address-input {
+    flex: 1;
+    padding: 10px;
+    padding-right: 1px;
+    margin-right: 5px;
+    font-size: 14px;
+    width: 80px;
+    border-radius: 5px;
+    border:none;
+  }
+  
+  /* สไตล์สำหรับปุ่ม */
+  .search-button {
+    background-color: #c0c0c0; /* สีเทา */
+    color: #000;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+  
+  .search-button:hover {
+    background-color: #a9a9a9; /* สีเทาเข้มขึ้นเมื่อ hover */
+  }
+  
+  .dashboard {
+    max-width: auto;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .discord {
+    margin-top: 5px;
+    padding: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  /* Stats Section */
+  .cards-container {
+    display: flex; /* ใช้ Flexbox */
+    gap: 20px; /* เพิ่มช่องว่างระหว่างกล่อง */
+    padding: 20px;
+    justify-content: center; /* จัดให้อยู่กลางแนวนอน */
+    align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+  }
+  
+  .card {
+    width: 200px;
+    border: 1px solid #4caf50;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .card-body {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Content Section */
+  .content-section {
+    display: flex;
+    gap: 10px;
+    padding-left: 480px;
+    margin-top: 20px;
+  }
+  
+  .features {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .recent-blocks {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .features h3,
+  .recent-blocks h3 {
+    margin-bottom: 15px;
+    margin-left: 40px;
+    color: #333;
+    font-size: 1.2em;
+    align-items: center;
+  }
+  
+  .features ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .features ul li {
+    padding: 5px 0;
+  }
+  
+  .recent-blocks table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .recent-blocks th,
+  .recent-blocks td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Connection Settings */
+  .connection-settings {
+    padding: 20px;
+    padding-left: 477px;
+    margin: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .connection-settings h3 {
+    padding-right: 1100px;
+  
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+  
+  .connection-settings table {
+    display: center;
+    width: 71%;
+    border-collapse: collapse;
+  }
+  
+  .connection-settings th,
+  .connection-settings td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .connection-settings th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  td {
+    font-size: 12px;
+    padding: 59px;
+  }
+  
+  .connection-settings {
+    font-size: 13px;
+  }
+  
+  .connection-settings td[colspan="3"] {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #333;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+  }
+  
+  .footer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .help {
+    font-size: 30px;
+    margin-left: 20%; /* เพิ่มระยะห่างด้านซ้าย */
+    margin-right: auto; /* ลบการตั้งค่าด้านขวา */
+  }
+  
